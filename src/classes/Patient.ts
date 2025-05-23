@@ -5,7 +5,7 @@ export class Patient {
     name: string;
     birth: string;
     cpf: number;
-    adress: string;
+    address: string;
     phone: number;
     sus: number;
     priority: priorityColor;
@@ -16,7 +16,7 @@ export class Patient {
         this.name = name;
         this.birth = birth;
         this.cpf = cpf;
-        this.adress = adress;
+        this.address = adress;
         this.phone = phone;
         this.sus = sus;
         this.priority = priority;

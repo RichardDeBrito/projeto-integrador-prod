@@ -11,8 +11,8 @@ export class QueuesPriority {
 
     last_treated: Patient | null = null;
     
-    insert_patient(name: string, birth: string, cpf: number, adress: string, phone: number, sus: number, priority: priorityColor) :void {
-        const patient = new Patient(name, birth, cpf, adress, phone, sus, priority);
+    insert_patient(name: string, birth: string, cpf: number, address: string, phone: number, sus: number, priority: priorityColor) :void {
+        const patient = new Patient(name, birth, cpf, address, phone, sus, priority);
         
         switch (patient.priority) {
             case 'vermelho':
@@ -73,7 +73,7 @@ export class QueuesPriority {
         for(let i: number = 0; i < this.geralqueue.length; i++) {
             for (let j: number = 0; j < this.geralqueue[i].length; j++) {
                 if(this.geralqueue[i][j].status === 'Atendido') {
-                    this.geralqueue[i].splice(j);
+                    this.geralqueue[i].splice(j,1);
                 }
             }
         }
